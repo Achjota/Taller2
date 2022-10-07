@@ -1,14 +1,13 @@
 package model;
 
 public enum CodigoCarrera {
-    Ici("ICI"),
+    Ici("ICI");
     private String codigoCarrera;
     private CodigoCarrera(String codigoCarrera ){
-        this.= codigoCarrera;
+        this.codigoCarrera= codigoCarrera;
     }
 
-    public String getNombreCarrera() {
+    public String getCodigoCarrera() {
         return codigoCarrera;
     }
     }
-}

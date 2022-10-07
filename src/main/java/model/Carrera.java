@@ -2,8 +2,13 @@ package model;
 
 public class Carrera {
 	private String nombreCarrera;
-	private String codigoCarrera;
+	private CodigoCarrera codigoCarrera;
 	private int cantidadSemestres;
+
+	public Carrera(String nombreCarrera){
+		this.nombreCarrera=nombreCarrera;
+				this.codigoCarrera=codigoCarrera;
+				this.cantidadSemestres=cantidadSemestres;}
 
 	public String getNombreCarrera() {
 		return this.nombreCarrera;
@@ -13,7 +18,7 @@ public class Carrera {
 		this.nombreCarrera=nombreCarrera;
 	}
 
-	public String getCodigoCarrera() {
+	public CodigoCarrera getCodigoCarrera() {
 		return this.codigoCarrera;
 	}
 

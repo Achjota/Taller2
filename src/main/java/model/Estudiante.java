@@ -6,9 +6,10 @@ public class Estudiante {
 	private String apellido;
 	private int numeroMatricula;
 	private Carrera carrera;
-	public Cliente(String nombre, String rut, String apellido,int numeroMatricula) {
-		super(nombre,rut);
+	public Estudiante(String nombre, String rut, String apellido) {
+		this.nombre=nombre;
 		this.apellido = apellido;
+		this.rut=rut;
 		this.numeroMatricula = numeroMatricula ;}
 
 	public String getNombre() {

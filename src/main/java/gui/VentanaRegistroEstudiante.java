@@ -75,8 +75,7 @@ public class VentanaRegistroEstudiante extends Ventana{
 		this.add(this.campoNumeroMatricula);
 	}
 	private boolean registrarEstudiante(){
-		return universidad.añadirEstudiante(this.campoNombre.getText(),this.campoNombre.getText(),this.campoRut.getText(),
-				this.campoNumeroMatricula.getText(), this.campoRut.getText());
+		return universidad.añadirEstudiante(this.campoNombre.getText(),this.campoRut.getText(),this.campoApellido.getText(), Integer.parseInt(this.campoNumeroMatricula.getText()));
 	}
 	public void actionPerformed(ActionEvent e) {
 		if (e.getSource() == this.botonRegistrar) {

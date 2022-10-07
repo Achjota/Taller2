@@ -5,6 +5,7 @@ import model.*;
 import model.Carrera;
 import model.Estudiante;
 import model.Universidad;
+import model.CodigoCarrera;
 public class UniversidadController {
 	public static Universidad cargaMasivaDatos(Universidad universidad) {
 		GestorDatos.leerArchivoEstudiantes(universidad, "estudiantes.txt");

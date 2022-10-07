@@ -16,7 +16,7 @@ public class GestorDatos {
             //Lee cada linea del archivo hasta que la linea sea nula
             while ((textoArchivo = br.readLine()) != null) {
                 String[] data = textoArchivo.split(",");
-                automotora.getEstudiantes().add(new Estudiante(data[0], data[1], data[2], data[3], data[4]));
+                automotora.getEstudiantes().add(new Estudiante(data[0], data[1], data[2]));
             }
             br.close();
             fr.close();
@@ -32,10 +32,9 @@ public class GestorDatos {
             File archivo = new File(direccionArchivo);
             FileReader fr = new FileReader(archivo);
             BufferedReader br = new BufferedReader(fr);
-            //Lee cada linea del archivo hasta que la linea sea nula
             while ((textoArchivo = br.readLine()) != null) {
                 String[] data = textoArchivo.split(",");
-                universidad.getCarreras().add(new Carrera(data[0], data[1], Integer.parseInt(data[2])));
+                universidad.getCarreras().add(new Carrera(data[0]));
             }
             br.close();
             fr.close();
@@ -44,7 +43,6 @@ public class GestorDatos {
         }
         return universidad;
     }
-
 
     public static boolean registrarDato(Object objeto, String direccionArchivo) {
         boolean lineaVacia = false;

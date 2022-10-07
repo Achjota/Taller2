@@ -1,18 +1,15 @@
 package model;
 import Utils.ValidadorRut;
 
-import java.awt.*;
-import java.io.CharArrayReader;
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-public class Universidad {
+public class Universidad{
     private List<Estudiante> estudiantes;
     private List<Carrera> carreras;
 
 public Universidad() {
-    this.estudiantes=new ArrayList<Estudiante>;
-    this.carreras= new ArrayList<Carrera>;
+    this.estudiantes=new ArrayList<Estudiante>();
+    this.carreras= new ArrayList<Carrera>();
     }
     public List<Estudiante> getEstudiantes() {return estudiantes;}
 
@@ -22,7 +19,7 @@ public Universidad() {
         Estudiante estudiante = null;
         for (Estudiante estudianteAux : this.estudiantes) {
             if (estudianteAux.getRut().equals(rut)) {
-                estudiantes = estudianteAux;
+                estudiante = estudianteAux;
                 break;
             }
         }
@@ -38,17 +35,8 @@ public Universidad() {
         }
         return carrera;
     }
-    public boolean añadirEstudiante(String nombre, String rut,String apellido,int numeroMatricula) {
-        if (ValidadorRut.validarDigito(rut) && this.buscarEstudiante(rut)==null) {
-            Estudiante vendedor = new Estudiante(nombre, rut, apellido, numeroMatricula);
-            this.estudiantes.add(estudiantes);
-            return true;
-        } else {
-            return false;
-        }
-    }
-    public Carrera añadirCarrera(String nombre,CodigoCarrera codigoCarrera,int cantidadSemestres){
-        Carrera carrera= new Carrera(nombre,codigoCarrera,cantidadSemestres);
+    public Carrera añadirCarrera(String nombreCarrera, CodigoCarrera codigoCarrera, int cantidadSemestres){
+        Carrera carrera= new Carrera(nombreCarrera);
         this.carreras.add(carrera);
         return carrera;
     }
@@ -68,6 +56,16 @@ public Universidad() {
                 estudiantes.add(estudiante);
             }
         }
-        return carreras;
+        return estudiantes;
+    }
+
+    public boolean añadirEstudiante(String nombre,String rut,String apellido,int numeroMatricula) {
+        if (ValidadorRut.validarDigito(rut) && this.buscarEstudiante(rut)==null) {
+            Estudiante estudiante= new Estudiante(nombre,rut,apellido);
+            this.estudiantes.add(estudiante);
+            return true;
+        } else {
+            return false;
+        }
     }
 }
