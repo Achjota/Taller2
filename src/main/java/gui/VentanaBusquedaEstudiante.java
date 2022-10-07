@@ -78,7 +78,7 @@ public class VentanaBusquedaEstudiante extends Ventana{
 			VentanaTabla ventanaTabla= new VentanaTabla(registrarEstudiante(),nombreColumnas);
 		}
 		if (e.getSource() == this.botonRegresar){
-			VentanaBusquedaEstudiante ventanaBusquedaEstudiante = new VentanaBusquedaEstudiante(universidad);
+			VentanaBienvenida ventanaBienvenida = new VentanaBienvenida(universidad);
 			this.dispose();
 		}
 

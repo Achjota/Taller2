@@ -9,8 +9,9 @@ public class Ventana extends JFrame implements ActionListener {
 
     protected Ventana(String nombre){
         super(nombre);
+        setSize(800,600);
         super.setVisible(true);
-        super.setDefaultCloseOperation(0);
+        super.setDefaultCloseOperation(EXIT_ON_CLOSE);
         super.setLocationRelativeTo(null);
         super.setResizable(false);
         this.setLayout(null);

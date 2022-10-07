@@ -17,6 +17,16 @@ public class VentanaBienvenida extends Ventana {
 	private model.Universidad Universidad;
 	private JPanel panelBienvenida;
 
+
+
+	public VentanaBienvenida(){
+		super("Bienvenida");
+		add(panelBienvenida);
+		setSize(300,200);
+		setLocationRelativeTo(null);
+		setDefaultCloseOperation(EXIT_ON_CLOSE);
+	}
+
 	public VentanaBienvenida(Universidad universidad) {
 		super("Bienvenida");
 		this.universidad = universidad;

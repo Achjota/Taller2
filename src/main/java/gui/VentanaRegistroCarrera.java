@@ -40,12 +40,12 @@ public class VentanaRegistroCarrera extends Ventana{
 	}
 	private void generarListaCarreras(){
 		super.generarJLabel(this.textoNombreCarrera,"Nombre Carrera:",20,100,100,20);
-		String [] arreglo = new String[]{"hola","chao"};
+		String [] arreglo = new String[]{"ICI","ICI-I"};
 		this.listaCarreras=super.generarListaDesplegable(arreglo,120,100, 100, 20);
 		this.add(this.listaCarreras);
 	}
 	private void generarBotonRegistrar() {
-		String textoBoton= "Registrar Vehículo";
+		String textoBoton= "Registrar Carrera";
 		this.botonRegistrar = super.generarBoton(textoBoton, 75, 400, 150, 20);
 		this.add(this.botonRegistrar);
 		this.botonRegistrar.addActionListener(this);
