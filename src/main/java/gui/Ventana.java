@@ -78,4 +78,8 @@ public class Ventana extends JFrame implements ActionListener {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
+    public static void main(String[] args) {
+        JFrame frame = new Ventana("Bienvenida");
+        frame.setVisible(true);
+    }
 }

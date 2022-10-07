@@ -15,6 +15,7 @@ public class VentanaBienvenida extends Ventana {
 	private JButton botonBuscarEstudiante;
 	private Universidad universidad;
 	private model.Universidad Universidad;
+	private JPanel panelBienvenida;
 
 	public VentanaBienvenida(Universidad universidad) {
 		super("Bienvenida");
@@ -87,5 +88,6 @@ public class VentanaBienvenida extends Ventana {
 	public static void main(String[] args) {
 		JFrame frame = new VentanaBienvenida("Bienvenida");
 		frame.setVisible(true);
+
 	}
 }
