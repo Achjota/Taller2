@@ -40,4 +40,9 @@ public class Estudiante {
 	public void setNumeroMatricula() {
 		this.numeroMatricula=numeroMatricula;
 	}
+
+	@Override
+	public String toString(){
+		return this.nombre+","+this.apellido+","+this.numeroMatricula+","+this.carrera+",";
+	}
 }

@@ -14,7 +14,7 @@ public class VentanaRegistroEstudiante extends Ventana{
 	private JButton botonRegistrar, botonCancelar;
 	private Universidad universidad;
 
-	public VentanaRegistrarCliente(Universidad universidad){
+	public VentanaRegistroEstudiante(Universidad universidad){
 		super("Registro de Estudiante", 500, 520);
 		this.universidad= universidad;
 		generarElementosVentana();
