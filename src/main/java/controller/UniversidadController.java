@@ -1,11 +1,19 @@
 package controller;
 
-import model.Carrera;
+import data.GestorDatos;
+import model.*;
 import model.Carrera;
 import model.Estudiante;
-import model.Estudiante;
-
+import model.Universidad;
 public class UniversidadController {
-	private Carrera carreras = new Carrera[0];
-	private Estudiante estudiantes = new Estudiante[0];
+	public static Universidad cargaMasivaDatos(Universidad universidad) {
+		GestorDatos.leerArchivoEstudiantes(universidad, "estudiantes.txt");
+		GestorDatos.leerArchivoCarreras(universidad, "carreras.txt");
+		return universidad;
+	}
+
+	public static void almacenarDatos(Universidad universidad) {
+		GestorDatos.registrarDatos(universidad.getEstudiantes(), "estudiantes.txt");
+		GestorDatos.registrarDatos(universidad.getCarreras(), "carreras.txt");
+	}
 }

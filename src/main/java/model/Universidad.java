@@ -38,14 +38,36 @@ public Universidad() {
         }
         return carrera;
     }
-    public boolean añadirVendedor(String nombre, String rut,String apellido) {
+    public boolean añadirEstudiante(String nombre, String rut,String apellido,int numeroMatricula) {
         if (ValidadorRut.validarDigito(rut) && this.buscarEstudiante(rut)==null) {
-            Estudiante vendedor = new Estudiante(nombre, rut, apellido);
+            Estudiante vendedor = new Estudiante(nombre, rut, apellido, numeroMatricula);
             this.estudiantes.add(estudiantes);
             return true;
         } else {
             return false;
         }
     }
-
+    public Carrera añadirCarrera(String nombre,CodigoCarrera codigoCarrera,int cantidadSemestres){
+        Carrera carrera= new Carrera(nombre,codigoCarrera,cantidadSemestres);
+        this.carreras.add(carrera);
+        return carrera;
+    }
+    public List<Carrera> buscarCarreraNombre(String nombre) {
+        List<Carrera> carreras = new ArrayList<Carrera>();
+        for (Carrera carrera : this.carreras) {
+            if (carrera.getNombreCarrera().equals(nombre)) {
+                carreras.add(carrera);
+            }
+        }
+        return carreras;
+    }
+    public List<Estudiante> buscarEstudianteNombre(String nombre) {
+        List<Estudiante> estudiantes = new ArrayList<Estudiante>();
+        for (Estudiante estudiante : this.estudiantes) {
+            if (estudiante.getNombre().equals(nombre)) {
+                estudiantes.add(estudiante);
+            }
+        }
+        return carreras;
+    }
 }
