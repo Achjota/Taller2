@@ -1,7 +1,7 @@
 package model;
 
 public enum NombreEstudiante {
-    Jorge("Jorge")
+    Jorge("Jorge");
 
     private String nombreEstudiante;
 

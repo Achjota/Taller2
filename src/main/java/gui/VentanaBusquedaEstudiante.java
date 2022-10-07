@@ -19,7 +19,7 @@ public class VentanaBusquedaEstudiante extends Ventana{
 	private JTextField campoNombre;
 
 	public VentanaBusquedaEstudiante(Universidad universidad) {
-		super("Búsqueda de Estudiante", 500, 520);
+		super("Búsqueda de Estudiante");
 		this.universidad = universidad;
 		generarElementosVentana();
 	}
@@ -57,7 +57,7 @@ public class VentanaBusquedaEstudiante extends Ventana{
 		String[][] datosEstudiantes;
 		if(this.campoNombre.getText().length()==0){
 			System.out.println(this.listaEstudiante.getSelectedItem());
-			estudiantes= universidad.buscarEstudianteNombre((NombreEstudiante) this.listaEstudiante.getSelectedItem());
+			estudiantes= (List<Estudiante>) universidad.buscarEstudianteNombre(String.valueOf((NombreEstudiante) this.listaEstudiante.getSelectedItem()));
 		}
 		else{
 			estudiantes= universidad.buscarEstudianteNombre(this.campoNombre.getText());

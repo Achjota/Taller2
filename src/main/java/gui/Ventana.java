@@ -7,11 +7,10 @@ public class Ventana extends JFrame implements ActionListener {
     private final Font fuenteTitulo;
     private final Font fuenteTexto;
 
-    protected Ventana(String nombre,int largoX,int largoY){
+    protected Ventana(String nombre){
         super(nombre);
         super.setVisible(true);
         super.setDefaultCloseOperation(0);
-        super.setSize(largoX, largoY);
         super.setLocationRelativeTo(null);
         super.setResizable(false);
         this.setLayout(null);

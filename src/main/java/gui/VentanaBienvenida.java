@@ -14,12 +14,20 @@ public class VentanaBienvenida extends Ventana {
 	private JButton botonRegistrarEstudiante;
 	private JButton botonBuscarEstudiante;
 	private Universidad universidad;
+	private model.Universidad Universidad;
 
 	public VentanaBienvenida(Universidad universidad) {
-		super("Intranet");
+		super("Bienvenida");
 		this.universidad = universidad;
 		generarElementosVentana();
 	}
+
+	public VentanaBienvenida(String bienvenida) {
+		super("Bienvenida");
+		this.universidad = universidad;
+		generarElementosVentana();
+	}
+
 	private void generarElementosVentana() {
 		generarMensajeMenu();
 		generarBotonRegistrarEstudiante();
@@ -74,5 +82,10 @@ public class VentanaBienvenida extends Ventana {
 			this.dispose();
 			System.exit(0);
 		}
+	}
+
+	public static void main(String[] args) {
+		JFrame frame = new VentanaBienvenida("Bienvenida");
+		frame.setVisible(true);
 	}
 }

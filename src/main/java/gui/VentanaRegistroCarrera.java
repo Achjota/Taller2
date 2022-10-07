@@ -21,7 +21,7 @@ public class VentanaRegistroCarrera extends Ventana{
 
 	}
 	public VentanaRegistroCarrera(Universidad universidad){
-		super("Registro de Carreras", 500, 520);
+		super("Registro de Carreras");
 		this.universidad = universidad;
 		generarElementosVentana();
 
@@ -65,20 +65,21 @@ public class VentanaRegistroCarrera extends Ventana{
 		this.campoCantidadaSemestres = super.generarJFormattedTextField(formato, 200, 200, 250, 20);
 		this.add(this.campoCantidadaSemestres);
 	}
-	private boolean registrrarCarrera(){
+	private boolean registrarCarrera(){
 		if(this.campoNombreCarrera.getText().length()==0 || this.campoCodigoCarrera.getText().length()==0 ||
-				this.campoCantidadaSemestres.getText().length()==0 || this.campoCantidadSemestres.getText().length()==0 ||
+				this.campoCantidadSemestres.getText().length()==0){
 			return false;
-		}
-		else{
+		   }
+		  else{
 
 			return true;
-		}
+		  }
+	  }
 	}
 
 	public void actionPerformed(ActionEvent e) {
 		if(e.getSource() == this.botonRegistrar){
-			if(registrrarCarrera()){
+			if(registrarCarrera()){
 				universidad.añadirCarrera(this.campoNombreCarrera.getText(),(CodigoCarrera) this.campoCodigoCarrera.getSelectedText(),
 						Integer.parseInt(this.campoCantidadSemestres.getText()),Integer.parseInt(this.campoCantidadSemestres.getText()),
 				JOptionPane.showMessageDialog(this,"Carrera Registrada Correctamente","Mensaje de confirmación",

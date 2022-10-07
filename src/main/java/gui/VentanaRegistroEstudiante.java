@@ -2,10 +2,9 @@ package gui;
 
 import controller.UniversidadController;
 import model.Universidad;
-import javax.swing.text.InternationalFormatter;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
-import gui.Ventana.*;
 
 public class VentanaRegistroEstudiante extends Ventana{
 	private UniversidadController universidadController;
@@ -15,7 +14,7 @@ public class VentanaRegistroEstudiante extends Ventana{
 	private Universidad universidad;
 
 	public VentanaRegistroEstudiante(Universidad universidad){
-		super("Registro de Estudiante", 500, 520);
+		super("Registro de Estudiante");
 		this.universidad= universidad;
 		generarElementosVentana();
 	}
